@@ -1,6 +1,4 @@
 
-const buttonApplyPromo = document.getElementById('promo-code-button');
-
 /* variables assignment */
 const bestPrice = document.getElementById('best-price');
 const extraMemoryCost = document.getElementById('memory-cost')
@@ -11,7 +9,7 @@ const finalTotal = document.getElementById('final-total');
 const promoCodeInput = document.getElementById('promo-code-input');
 
 
-//Memory
+////// Memory //////
 function memoryCost( memory){
 if (memory == true){
   extraMemoryCost.innerText = 0;
@@ -23,7 +21,7 @@ else {
 totalValue ();
 }
 
-//handle memory cost
+////// handle memory cost //////
  document.getElementById('8-gb-memory').addEventListener('click', function(){
    memoryCost(true);
    
@@ -35,12 +33,12 @@ totalValue ();
 
 
 
- //Storage
+ ////// Storage //////
  function storageCost (storage) {
   extraStorageCost.innerText = storage;
   totalValue ();
  }
- //handle storage cost
+ ///// handle storage cost //////
  document.getElementById('256-gb-storage').addEventListener('click', function(){
    storageCost (0);
    
@@ -55,7 +53,7 @@ totalValue ();
  });
 
 
- //delivery charge
+ ////// delivery charge //////
 
  function deliveryCost (delivery){
     if ( delivery == true){
@@ -76,7 +74,7 @@ totalValue ();
  });
 
 
- // Total Price
+ ////// Total Price ///////
  function totalValue (){
    const memoryCostText = extraMemoryCost.innerText;
    const memoryCostNumber = parseFloat(memoryCostText);
@@ -95,21 +93,18 @@ totalValue ();
    finalTotal.innerText = allTotal;
  }
 
- //Promo Code
- function promoCode (){
+
+
+
+
+document.getElementById('promo-code-button').addEventListener('click', function (){
+
   const promoCodeValue = promoCodeInput.value;
   if ( promoCodeValue == 'stevekaku'){
     const totalPrice = parseFloat(document.getElementById('total-cost').innerText);
-    totalPrice = totalPrice - (totalPrice * 0.20);
-    document.getElementById('final-total').innerText = totalPrice;
+    var discount = totalPrice/100 * 20;
+    document.getElementById('final-total').innerText = totalPrice - discount;
   }
   //clear promo code field 
   promoCodeInput.value = '';
-  
- }
-
-
- /* //
-document.getElementById('promo-code-button').addEventListener('click', function (){
-  promoCode ();
-}) */
+})
