@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Store</title>
+    <!--   Tailwind CSS -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!--  Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <!-- main started -->
+    <main class="w-3/4 mx-auto">
+      <section class="mt-16 mb-4">
+        <div class="grid grid-cols-2 mb-2">
+          <div class="">
+            <img src="images/mac.png" alt="" />
+          </div>
+
+          <div class="ml-14">
+            <h2 class="text-5xl mb-6 font-normal">
+              Customize your Blue 24-inch iMac with Apple M1 chip.
+            </h2>
+            <p>
+              Apple M1 chip with 8-core CPU with 4 performance cores and 4
+              efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB
+              unified memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic
+              Mouse Magic Keyboard - US English
+            </p>
+
+            <section class="mt-6">
+              <h3 class="font-bold mb-2">Memory</h3>
+              <div>
+                <button
+                id="8-gb-memory"
+                  class=" 
+                    border border-gray-900
+                    rounded
+                    px-4
+                    focus:ring-2 focus:ring-gray-500
+                    bg-gray-100
+                    hover:bg-gray-700 hover:text-white
+                  "
+                >
+                  8GB unified memory
+                </button>
+                <button 
+                id="16-gb-memory"
+                  class="
+                    border border-gray-900
+                    rounded
+                    px-4
+                    focus:ring-2 focus:ring-gray-500
+                    bg-gray-100
+                    hover:bg-gray-700 hover:text-white
+                  "
+                >
+                  16GB unified memory
+                </button>
+              </div>
+            </section>
+            <section class="mt-6">
+              <h3 class="font-bold mb-2">Storage</h3>
+              <div>
+                <button id="256-gb-storage"
+                  class="
+                    border border-gray-900
+                    rounded
+                    px-4
+                    focus:ring-2 focus:ring-gray-500
+                    bg-gray-100
+                    hover:bg-gray-700 hover:text-white
+                  "
+                >
+                  256GB SSD storage
+                </button>
+                <button id="512-gb-storage"
+                  class="
+                    border border-gray-900
+                    rounded
+                    px-4
+                    focus:ring-2 focus:ring-gray-500
+                    bg-gray-100
+                    hover:bg-gray-700 hover:text-white
+                  "
+                >
+                  512GB SSD storage
+                </button>
+                <button id="1-tb-storage"
+                  class=" mt-1
+                    border border-gray-900
+                    rounded
+                    px-4
+                    focus:ring-2 focus:ring-gray-500
+                    bg-gray-100
+                    hover:bg-gray-700 hover:text-white
+                  "
+                >
+                  1TB SSD storage
+                </button>
+              </div>
+            </section>
+            <section class="mt-6">
+              <h3 class="font-bold mb-2">Choose your delivery option</h3>
+              <div class="mb-4">
+                <button
+                id="delivery-by-25"
+                  class="
+                    border border-gray-900
+                    rounded
+                    px-4
+                    focus:ring-2 focus:ring-gray-500
+                    bg-gray-100
+                    hover:bg-gray-700 hover:text-white
+                  "
+                >
+                  Wednesday, Aug 25 FREE Prime Delivery
+                </button>
+                <button
+                  id="delivery-by-21"
+                  class=" mt-1
+                    border border-gray-900
+                    rounded
+                    px-4
+                    focus:ring-2 focus:ring-gray-500
+                    bg-gray-100
+                    hover:bg-gray-700 hover:text-white
+                  "
+                >
+                  Saturday, Aug 21 Delivery charge $20
+                </button>
+              </div>
+            </section>
+           
+
+
+            <div class=" mt-8 font-medium grid grid-cols-2 ">
+              <div class=" divide-y divide-gray-500">
+              <h3> Best Price</h3>
+              <h3> Extra Memory Cost</h3>
+              <h3> Extra Storage Cost</h3>
+              <h3> Delivery Charge </h3>
+              <h3> Total Price</h3>
+            </div>
+              <div class="divide-y divide-gray-500">
+                <h3> $<span id="best-price">1299</h3>
+                <h3> $<span id="memory-cost">00</span></h3>
+                <h3> $<span id="storage-cost">00</span></h3>
+                <h3> $<span id="delivery-charge">00</span></h3>
+                <h3> $<span id="total-price">1299</span></h3>
+              </div>
+            </div>
+
+           
+             
+
+          
+
+            <!--   pomo code part -->
+            <section class="mt-8">
+              <h5>Add Promo Code</h5>
+              <div>
+                <input id="promo-code-input" class="border border-gray-300 rounded" type="text" />
+                <button id="promo-code-button" class="bg-red-600 text-white px-4 rounded">
+                  Apply
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+        <hr id="style" />
+        <h3 class="text-center text-3xl font-medium ">Total: $<span id="final-total">1299</span></h3>
+      </section>
+    </main>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
