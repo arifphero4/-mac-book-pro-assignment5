@@ -96,7 +96,7 @@ totalValue ();
 
 
 
-
+////// Promo Code ///////
 document.getElementById('promo-code-button').addEventListener('click', function (){
 
   const promoCodeValue = promoCodeInput.value;
